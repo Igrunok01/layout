@@ -1,0 +1,21 @@
+.body-page {
+  font-family: $font-base;
+  font-size: $font-size-base;
+  font-weight: $font-weight-base;
+  color: $color-black;
+  margin: 0;
+  box-sizing: border-box;
+
+  &--wide {
+    width: 100%;
+    min-width: 320px;
+    max-width: 1920px;
+    margin: 0 auto;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}

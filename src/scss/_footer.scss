@@ -1,0 +1,95 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  padding: $space-md;
+  margin-top: auto;
+  gap: $space-md;
+
+  @media (min-width: $breakpoint-md) {
+    &--adaptive {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      align-items: center;
+    }
+  }
+
+  @media (min-width: $breakpoint-xl) {
+    &--adaptive {
+      margin-left: 320px;
+    }
+  }
+
+  &__phone {
+    display: block;
+    font-weight: $font-weight-bold;
+    font-size: 24px;
+    text-decoration: none;
+    color: inherit;
+    line-height: $line-height-base;
+    transition: filter 0.4s ease-in-out, opacity 0.85s ease-in-out;
+
+    &:hover {
+      filter: brightness(60%);
+      opacity: 0.6;
+    }
+  }
+
+  &__mail {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    line-height: $line-height-base;
+    margin-bottom: 1rem;
+    transition: filter 0.4s ease-in-out, opacity 0.85s ease-in-out;
+
+    &:hover {
+      filter: brightness(60%);
+      opacity: 0.6;
+    }
+  }
+
+  &__address {
+    font-style: inherit;
+  }
+
+  &__lang-button {
+    font-size: inherit;
+    font-family: inherit;
+    line-height: $line-height-base;
+    color: inherit;
+  }
+
+  &__buttons,
+  &__language {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: $space-md;
+  }
+
+  &__policy,
+  &__info,
+  &__copyright {
+    font-weight: $font-weight-md;
+    font-size: $font-size-sm;
+    line-height: $line-height-sm;
+    text-align: center;
+    color: $color-gray;
+    margin: 0;
+  }
+
+  @media (min-width: $breakpoint-md) {
+    &__copyright {
+      text-align: start;
+    }
+
+    &__policy {
+      align-self: normal;
+    }
+
+    &__info {
+      text-align: end;
+    }
+  }
+}

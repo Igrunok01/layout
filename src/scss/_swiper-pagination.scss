@@ -1,0 +1,9 @@
+.swiper-pagination {
+  @media (min-width: $breakpoint-md) {
+    display: none;
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: $color-gray;
+  }
+}

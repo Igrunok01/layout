@@ -1,0 +1,9 @@
+.main {
+  @media (min-width: $breakpoint-xl) {
+    margin-left: 320px;
+
+    & .section-title {
+      display: none;
+    }
+  }
+}

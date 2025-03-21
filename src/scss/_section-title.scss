@@ -1,0 +1,18 @@
+.section-title {
+  display: block;
+  position: relative;
+  font-weight: $font-weight-bold;
+  padding-left: clamp(16px, 3.2vw, 32px);
+  font-size: $font-size-md;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 0 15px 15px 0;
+    background: $color-accent;
+  }
+}

@@ -1,0 +1,114 @@
+.repair {
+  padding: $space-lg;
+  padding-right: 0;
+
+  &__title {
+    margin-top: 0;
+    font-weight: 400;
+    line-height: $line-height-base;
+    color: $color-gray;
+    text-transform: uppercase;
+    background: linear-gradient(270deg, $color-white 0%, $color-white 98.61%);
+  }
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  &__item {
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    flex: 1 0 220px;
+    padding: 10px;
+    height: 72px;
+
+    &:hover {
+      border-radius: 8px;
+      transition: box-shadow 0.5s;
+      box-shadow: inset 0 0 40px 2px rgba($color-black, 0.3);
+    }
+
+    &--size {
+      height: 160px;
+    }
+  }
+
+  &__text {
+    font-family: $font-base;
+    font-weight: $font-weight-md;
+    line-height: $line-height-base;
+    font-size: $font-size-base;
+    color: $color-black;
+    margin-bottom: auto;
+  }
+
+  &__arrow {
+    margin-top: auto;
+  }
+
+  &__toggle {
+    transition: filter 0.4s ease-in-out, opacity 0.85s ease-in-out;
+
+    &:hover {
+      filter: brightness(60%);
+      opacity: 0.6;
+    }
+  }
+
+  @media (max-width: ($breakpoint-md - 1)) {
+    &__toggle {
+      display: none;
+    }
+  }
+
+  @media (min-width: $breakpoint-md) {
+    padding-right: $space-lg;
+
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: $space-md;
+    }
+
+    &__item--hidden {
+      display: none;
+    }
+
+    &--expanded &__item--hidden {
+      display: flex;
+    }
+
+    &__toggle {
+      display: inline-flex;
+      align-items: center;
+      border: none;
+      padding: 0;
+      background: transparent;
+      cursor: pointer;
+    }
+
+    &__toggle-text {
+      font-family: $font-base;
+      font-weight: $font-weight-md;
+      line-height: $line-height-base;
+      font-size: $font-size-base;
+    }
+  }
+
+  @media (min-width: $breakpoint-lg) {
+    &__list {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}

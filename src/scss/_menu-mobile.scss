@@ -1,0 +1,35 @@
+.menu-mobile {
+  background: $color-white;
+  box-shadow: 16px 0 52px rgba($shadow-dark-rgb, 0.2);
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: -320px;
+  width: 320px;
+  height: 100%;
+
+  @media (min-width: $breakpoint-xl) {
+    left: auto;
+    box-shadow: none;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: $space-lg;
+    margin-bottom: 20px;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &--show {
+    left: 0;
+    z-index: 10;
+  }
+}

@@ -1,0 +1,132 @@
+.price {
+  padding: $space-lg;
+  padding-right: 0;
+
+  @media (min-width: $breakpoint-md) {
+    padding-right: $space-lg;
+  }
+
+  &__title {
+    margin-top: 0;
+    font-weight: $font-weight-base;
+    line-height: $line-height-base;
+    color: $color-gray;
+    text-transform: uppercase;
+    background: linear-gradient(270deg, $color-white 0%, $color-white 98.61%);
+  }
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    @media (min-width: $breakpoint-md) {
+      display: table;
+      width: 100%;
+      border-collapse: collapse;
+    }
+  }
+
+  &__item {
+    display: block;
+
+    &--hidden {
+      display: none;
+    }
+
+    @media (min-width: $breakpoint-md) {
+      display: table-row;
+    }
+  }
+
+  @media (min-width: $breakpoint-md) {
+    &__item:not(:first-child) &__detail-title {
+      display: none;
+    }
+  }
+
+  &__detail-title {
+    font-weight: $font-weight-md;
+    font-size: $font-size-base;
+    line-height: $line-height-sm;
+    color: $color-gray;
+    margin: 0;
+    margin-bottom: 4px;
+  }
+
+  &__detail-text {
+    font-weight: $font-weight-base;
+    font-size: $font-size-sm;
+    line-height: 18px;
+    margin: 0;
+  }
+
+  &__addition {
+    font-weight: $font-weight-base;
+    font-size: $font-size-sm;
+    line-height: 20px;
+  }
+
+  &__toggle-text {
+    font-weight: $font-weight-md;
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+    color: $color-black;
+  }
+
+  &__details {
+    list-style: none;
+    display: block;
+    min-width: 230px;
+    padding: 10px;
+    border-radius: 8px;
+
+    @media (min-width: $breakpoint-md) {
+      display: contents;
+    }
+
+    &:hover {
+      transition: box-shadow 0.5s;
+      box-shadow: inset 0px 0px 40px 2px rgba($color-black, 0.3);
+    }
+  }
+
+  &__detail {
+    display: block;
+    margin-bottom: $space-lg;
+
+    &--time {
+      display: inline-block;
+      margin-bottom: 0;
+    }
+
+    &--button {
+      float: right;
+      margin-bottom: 0;
+    }
+
+    @media (min-width: $breakpoint-md) {
+      display: table-cell;
+      padding: $space-sm;
+      vertical-align: middle;
+    }
+  }
+
+  &__toggle {
+    text-decoration: none;
+  }
+
+  &__toggle-icon {
+    position: relative;
+    top: 9px;
+  }
+
+  &__link {
+    transition: filter 0.4s ease-in-out, opacity 0.85s ease-in-out;
+
+    &:hover {
+      filter: brightness(60%);
+      opacity: 0.6;
+    }
+  }
+}

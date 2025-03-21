@@ -1,1 +1,1 @@
-# https://igrunok01.github.io/layout/gh-pages
+# https://igrunok01.github.io/layout
